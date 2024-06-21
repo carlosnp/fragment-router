@@ -1,0 +1,24 @@
+:host{
+  display: flex;
+  flex-direction: column;
+  padding:0 4rem;
+}
+.fragment, .query-params {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.obj-pre {
+  background: black;
+  color: white;
+  padding: 1rem;
+  pre {
+    padding: 0.5rem;
+  }
+}
+app-top-bar, app-query-params-bar, app-fragment-bar {
+  padding: 1rem 0;
+}

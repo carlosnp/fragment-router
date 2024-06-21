@@ -7,9 +7,7 @@ import { HOME_ROUTES } from './home.routes';
 import { ProductsComponent } from './pages/products';
 import { AboutComponent } from './pages/about';
 import { TopBarComponent } from '../components/top-bar';
-import { QueryParamsBarComponent } from '../components/query-params-bar';
-import { FragmentBarComponent } from '../components/fragment-bar';
-import { PageBaseComponentimplements } from './components/page-base';
+import { BarsComponent } from './components/bars';
 
 @NgModule({
   declarations: [AboutComponent, HomeBaseComponent, ProductsComponent],
@@ -17,9 +15,7 @@ import { PageBaseComponentimplements } from './components/page-base';
     CommonModule,
     RouterModule.forChild(HOME_ROUTES),
     TopBarComponent,
-    QueryParamsBarComponent,
-    FragmentBarComponent,
-    PageBaseComponentimplements,
+    BarsComponent
   ],
   providers: [HomeService]
 })

@@ -3,14 +3,15 @@
  * @param searchString 
  * @returns 
  */
-export const parseQueryParams = (searchString: string): Record<string, string | string[]> => {
+export const parseQueryParamsV1 = (searchString: string): Record<string, string | string[]> => {
   const params = new URLSearchParams(searchString);
   const queryParams: Record<string, string | string[]> = {};
-  for (const [key, value] of params.entries()) {
+
+  params.forEach((value, key) => {
     queryParams[key] = Array.isArray(queryParams[key])
-      ? [...(queryParams[key] as string[]), ...value]  // Flatten using spread syntax
+      ? [...(queryParams[key] as string[]), value]
       : value;
-  }
+  });
 
   return queryParams;
 }
