@@ -2,3 +2,6 @@
   display: flex;
   flex-direction: column;
 }
+app-top-bar, app-query-params-bar, app-fragment-bar {
+  padding: 1rem 0;
+}

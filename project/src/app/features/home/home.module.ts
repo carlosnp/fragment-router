@@ -9,6 +9,7 @@ import { AboutComponent } from './pages/about';
 import { TopBarComponent } from '../components/top-bar';
 import { QueryParamsBarComponent } from '../components/query-params-bar';
 import { FragmentBarComponent } from '../components/fragment-bar';
+import { PageBaseComponentimplements } from './components/page-base';
 
 @NgModule({
   declarations: [AboutComponent, HomeBaseComponent, ProductsComponent],
@@ -17,7 +18,8 @@ import { FragmentBarComponent } from '../components/fragment-bar';
     RouterModule.forChild(HOME_ROUTES),
     TopBarComponent,
     QueryParamsBarComponent,
-    FragmentBarComponent
+    FragmentBarComponent,
+    PageBaseComponentimplements,
   ],
   providers: [HomeService]
 })

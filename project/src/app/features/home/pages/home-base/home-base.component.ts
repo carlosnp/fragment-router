@@ -1,23 +1,26 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { Subject } from 'rxjs';
+import { Component } from "@angular/core";
+import { ActivatedRoute, Router } from '@angular/router';
+import { PageBaseComponentimplements } from '../../components/page-base';
 
 @Component({
   selector: "app-home-base",
   templateUrl: "./home-base.component.html",
   styleUrls: ["./home-base.component.scss"],
 })
-export class HomeBaseComponent implements OnDestroy{
+export class HomeBaseComponent extends PageBaseComponentimplements {
   /**
-   * Component destroyed stream
+   * Constructor del componente
+   * @param route 
+   * @param router 
    */
-  componentDestroyed$: Subject<void> = new Subject<void>();
-  /**
-   * Destructor del componente
-   */
-  ngOnDestroy() {
-    this.componentDestroyed$.next();
-    this.componentDestroyed$.complete();
+  constructor(route: ActivatedRoute, router: Router) {
+    super(route, router);
+  }
+  override ngOnInit(): void {
+    super.ngOnInit();
+  }
+  override ngOnDestroy(): void {
+    super.ngOnDestroy();
   }
 }
 

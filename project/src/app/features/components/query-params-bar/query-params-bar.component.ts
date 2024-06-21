@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
   templateUrl: "./query-params-bar.component.html",
   styleUrls: ["./query-params-bar.component.scss"],
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, RouterLink]
 })
 export class QueryParamsBarComponent implements OnDestroy{
   /**

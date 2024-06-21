@@ -1,5 +1,5 @@
 <div class="routes">
-  <a href="/?utm_google=pedro">home</a>
-  <a href="about?utm_source=hola">about</a>
-  <a href="products?utm_product=carne">products</a>
+  <a routerLink="/" [fragment]="f_custom1">home</a>
+  <a routerLink="/about" [fragment]="f_custom2">about</a>
+  <a routerLink="/products" [queryParams]="{utm_who: '92', utm_campain: '12345'}">products</a>
 </div>
